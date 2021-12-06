@@ -23,143 +23,69 @@
 
 
 	<title>Where water, finance and meta come together.</title>
-  </head>
 
-  <!--
+<!-- Add some CSS to change client UI -->
+    <style>
+    body {
+        background-color: #232F3E;
+        }
+    label, button {
+        color: #FF9900;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 40px;
+        }
+     input {
+        color: #232F3E;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 20px;
+        }
+    </style>
+    <!--
+    <script>
+        // define the callAPI function that takes a first name and last name as parameters
+        var callAPI = (firstName,lastName)=>{
+            // instantiate a headers object
+            var myHeaders = new Headers();
+            // add content type header to object
+            myHeaders.append("Content-Type", "application/json");
+            // using built in JSON utility package turn object to string and store in a variable
+            var raw = JSON.stringify({"firstName":firstName,"lastName":lastName});
+            // create a JSON object with parameters for API call and store in a variable
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            // make API call with parameters and use promises to get response
+            fetch("https://jwl5vgzkz9.execute-api.us-east-2.amazonaws.com/dev/", requestOptions)
+            .then(response => response.text())
+            .then(result => alert(JSON.parse(result).body))
+            .catch(error => console.log('error', error));
+        }
+    </script>
+  -->
 
-  <body>
-	<h1><p>ConnectingU, your source for affordable, convenient network administration and cybersecurity compliance.</p></h1>
-	<center><img src="Images/Networking.jpg"></center>
-	<br>
-	<br>
-	<p1><b>Why ConnectingU?</b>
-	<br>
-	There are many IT service providers, and they focus on being the lowest cost provider in the area.
-	Sure, they are cheap, but you get what you pay for.  Furthermore, due to the recent relevations about industry and government wide cyber attacks, the US government has amplified DFARS to include criminal and civil penalties, lauched the CMMC which is enforced by auditors and is required for DOD RFIs, and made NIST a part of HITRUST.  These regulations will spread to the rest of the federal government and even states. Don't the cheapest service in town lead to losing out on compliance and therefore contracts.</p1>	
-	<br>
-	<br>
-	<center><img src="Images/linuxserveradmin.png"></center>
-	<br>
-	<p1><b>Why does this matter to your business?</b>
-	<br>
-	A business does not have to directly do business with the federal government to be impacted by revised information security regulations.  If your business touches health care, public and private education from daycare through universities, research that could have military or space applications, you want to be aware of changes in regulations. If your business has any impact on the national infrastructure pillars of defense, finance, infrastructure or healthcare, you should expect added requirements.  You ask "what kind of requirements?", great question!  Well being banned from using any business service or device with a brand name from certain countries is one new restriction.  If your company has a home office in another country, their access to the business network in the US could be more limited.</p1>
-	<br>
-	<br>
-	<center>
-	<p1><b>Services offered</b>
-	</center>
-	<br>
-	<center>
-		<ul>
-			<li>Network design.</li>
-			<li>Network implementation, whether from the ground up or an upgrade.</li>
-			<li>Cloud implementation and support, including cloud servies for ITAR and GCC High.</li>
-			<li>Working with your legal team to identify compliance needs and enacting cost-effective solutions.</li>
-			<li>Working with compliance auditors to allow you to keep participating in RFIs.</li>
-			<li>On-site and remote desktop support.</li>
-			<li>Providing the needed IT support to help your business grow.</li>
-		</ul>
-	</center>
-	<br>
-	<center>
-	<p1><b>Compliance Resources</b>
-	</center>
-	<br>
-	<center>	
-		<ul>
-			<li>Federal Information Security Management Act (FISMA)</li>
-			<li>NIST 800-171</li>
-			<li>Cybersecurity Maturity Model Certification (CMMC)</li>
-			<li>DFARS 252.204-7012</li>
-			<li>International Traffic in Arms Regulations (ITAR)</li>>
-		</ul>
-	</center>
+</head>
 
-<br>
-<br>
-<center>
+  
 
-	<button class="button"><a href="mailto: gmajersky@connectingu.biz">Email</a></button>
-	<br>
-	<button class="button button2"><a href="tel:720-239-2762">Call us</a></button>
-</center>
-<br>
-<br>
-
-  </body>
+<body>
+	<h1><p>Where water, finance and meta come together.</p></h1>
+	<center></center>
 	
-</html>
--->
-
-<style>
-
-
-h1{
-	text-align: center;
-	font-size: small;
-	font-family: serif;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
-body{
-
-	background-size: auto;
-	background-attachment: fixed;
-}
-
-p1{
-
-	text-align: left;
-	font-size: medium;
-	font-family: serif;
-	font-weight: normal;
-	text-transform: normal;
-}
-
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  width: 50%;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.button:hover {background-color: #3e8e41}
-
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-
-.button2 {background-color: #f44336;} /* Red */ 
+  <!--  <form>
+        <label>First Name :</label>
+        <input type="text" id="fName">
+        <label>Last Name :</label>
+        <input type="text" id="lName"> -->
+        <!-- set button onClick method to call function we defined passing input values as parameters -->
+  <!--      <button type="button" onclick="callAPI(document.getElementById('fName').value,document.getElementById('lName').value)">Call AP
+        </button>
+    </form>
+  -->
 
 
-@-ms-viewport{
-	width: device-width;
-}
-
-@-webkit-viewport{
-	width: device-width;
-}
-
-@-moz-viewport{
-	width: device-width;
-}
-
-@-o-viewport{
-	width: device-width;
-}
-
-@viewport{
-	width: device-width;
-}
-
-</style>
+</body>
